@@ -10,17 +10,6 @@ from utils.sampling_methods import AliasSampling
 
 class Node2Vec(object):
     def __init__(self, graph: nx.Graph, p=1.0, q=0.5, r=5, walk_len=10, embed_dim=8, workers=4):
-        """
-        Node2Vec
-        https://cs.stanford.edu/people/jure/pubs/node2vec-kdd16.pdf
-        :param graph: The object of networkx.Graph
-        :param p: The return parameter used in model
-        :param q: The in-out parameter used in model
-        :param r: The iteration of all the nodes in graph
-        :param walk_len: The length of a random walk
-        :param embed_dim: The embedding dimensions of the node
-        :param workers: The maximum number of threads that can be used to execute the given calls
-        """
         self.graph = graph
         self.edge_alias_table = {}
         self.node_alias_table = {}
@@ -174,12 +163,27 @@ class Node2Vec(object):
             plt.annotate(annotate[i], xy=(x[i], y[i]), xytext=(x[i] + 0.01, y[i] + 0.01))
         plt.show()
 
-    def load_model(self, model_path):
-        with open(model_path, "r") as f:
-            model = json.load(f)
-        return model
+    def load_model(self, m):
+        pass
 
     def save_model(self, fname):
         with open(fname, 'w') as f:
             json.dump(self.model, f)
         logging.info("model saved.")
+
+
+if __name__ == "__main__":
+    with open("../datasets/example_data.txt", "r") as f:
+        data = f.read()
+        data = [[int(v) for v in line.split()] + [1] for line in data.split("\n")]
+
+    graph = nx.Graph()
+    graph.add_weighted_edges_from(data)
+
+    node2vec = Node2Vec(graph, r=5, p=1, q=0.1, walk_len=10,  embed_dim=2)
+    node2vec.train(batch_size=64, epochs=300)
+    print(node2vec.get_node_embeddings(0))
+    print(node2vec.get_most_similar_node(0))
+    print(node2vec.get_embeddings(g=False))
+    node2vec.plot_node_embeddings()
+
