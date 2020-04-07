@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../GraphNeuralNetworkEmbedding/.idea/GraphEmbedding.iml" filepath="$PROJECT_DIR$/../GraphNeuralNetworkEmbedding/.idea/GraphEmbedding.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../GNNE/.idea/GNNE.iml" filepath="$PROJECT_DIR$/../GNNE/.idea/GNNE.iml" />
     </modules>
   </component>
 </project>

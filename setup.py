@@ -5,8 +5,8 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="gnne",
-    version="0.0.1",
-    author="nelsonzhao",
+    version="0.0.4",
+    author="Nelson Zhao",
     author_email="dutzhaoyeyu@163.com",
     description="A Graph Neural Network Embedding Package",
     long_description=long_description,
