@@ -1,12 +1,14 @@
 Metadata-Version: 2.1
 Name: gnne
-Version: 0.0.1
+Version: 0.0.4
 Summary: A Graph Neural Network Embedding Package
 Home-page: https://github.com/NELSONZHAO/GNNE
-Author: nelsonzhao
+Author: Nelson Zhao
 Author-email: dutzhaoyeyu@163.com
 License: UNKNOWN
-Description: UNKNOWN
+Description: # GNNE
+        
+        GNNE: Abbreviation of Graph Neural Network Embeddings. This repo mainly implements the mainstream Graph Embedding algorithm, which can quickly and efficiently help researchers conduct model experiments.
 Platform: UNKNOWN
 Classifier: Programming Language :: Python :: 3
 Classifier: License :: OSI Approved :: MIT License

@@ -1,5 +1,9 @@
 .idea/
-*.egg_info/
 __pycache__/
 *.xml
 *.iml
+
+# Distribute Files
+build/
+dist/
+*.egg_info/
