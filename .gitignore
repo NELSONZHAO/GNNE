@@ -6,4 +6,4 @@ __pycache__/
 # Distribute Files
 build/
 dist/
-*.egg_info/
+*.egg-info/

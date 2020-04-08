@@ -1,8 +1,8 @@
 # coding: utf-8
 import networkx as nx
-from models.node2vec import Node2Vec
+from gnne.models.node2vec import Node2Vec
 
-with open("../datasets/example_data.txt", "r") as f:
+with open("datasets/example_data.txt", "r") as f:
     data = f.read()
     data = [[int(v) for v in line.split()] + [1] for line in data.split("\n")]
 
